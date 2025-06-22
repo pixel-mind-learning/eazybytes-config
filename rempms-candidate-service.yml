@@ -1,14 +1,3 @@
-server:
-  port: 7080
-
-resilience4j:
-  retry:
-    instances:
-      retryApi:
-        max-attempts: 3
-        wait-duration: 5s
-        retry-exceptions: #The list of that exception that will trigger a retry
-          - com.pdev.rempms.candidateservice.exception.FeignCustomException
 
 spring:
   cloud:
