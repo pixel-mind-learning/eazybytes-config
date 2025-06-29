@@ -43,4 +43,3 @@ eureka:
       defaultZone: "http://localhost:8070/eureka/"
   instance:
     prefer-ip-address: true
-    prefer-ip-address: true
