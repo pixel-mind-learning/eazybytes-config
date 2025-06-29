@@ -10,6 +10,25 @@ cards:
     - (412) 419-3491
     - (915) 382-1932
 
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
 info:
   app:
     name:
@@ -24,9 +43,4 @@ eureka:
       defaultZone: "http://localhost:8070/eureka/"
   instance:
     prefer-ip-address: true
-    
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+    prefer-ip-address: true
