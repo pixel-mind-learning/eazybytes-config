@@ -9,3 +9,24 @@ loans:
   onCallSupport:
     - (452) 456-2176
     - (546) 764-8934
+
+info:
+  app:
+    name:
+    description: "Eazy Bank Accounts Application"
+    version: "1.0.0"
+    
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: "http://localhost:8070/eureka/"
+  instance:
+    prefer-ip-address: true
+    
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

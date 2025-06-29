@@ -36,3 +36,15 @@ eureka:
       defaultZone: "http://localhost:8070/eureka/"
   instance:
     prefer-ip-address: true
+    
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
