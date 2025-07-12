@@ -10,6 +10,13 @@ loans:
     - (452) 456-2176
     - (546) 764-8934
 
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 management:
   endpoints:
     web:
