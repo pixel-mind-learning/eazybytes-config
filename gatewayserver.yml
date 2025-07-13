@@ -30,7 +30,8 @@ spring:
         webflux:
           discovery:
             locator:
-              enabled: true
+              # disabled default routing configurations/behaviour
+              enabled: false
               lower-case-service-id: true
 
 info:
