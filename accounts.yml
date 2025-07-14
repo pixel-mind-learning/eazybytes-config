@@ -37,7 +37,13 @@ info:
     name:
     description: "Eazy Bank Accounts Application"
     version: "1.0.0"
-    
+
+logging:
+  level:
+    com:
+      eazybytes:
+        gatewayserver: DEBUG
+
 eureka:
   client:
     register-with-eureka: true
