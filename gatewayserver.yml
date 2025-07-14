@@ -33,6 +33,11 @@ spring:
               # disabled default routing configurations/behaviour
               enabled: false
               lower-case-service-id: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 info:
   app:
