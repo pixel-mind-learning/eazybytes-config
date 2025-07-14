@@ -42,7 +42,7 @@ logging:
   level:
     com:
       eazybytes:
-        gatewayserver: DEBUG
+        loans: DEBUG
 
 eureka:
   client:

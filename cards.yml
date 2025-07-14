@@ -41,7 +41,7 @@ logging:
   level:
     com:
       eazybytes:
-        gatewayserver: DEBUG
+        cards: DEBUG
 
 eureka:
   client:
