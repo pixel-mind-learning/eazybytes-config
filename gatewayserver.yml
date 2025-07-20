@@ -49,3 +49,24 @@ logging:
     com:
       eazybytes:
         gatewayserver: DEBUG
+
+# Circuit breaker pattern configuration
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      # This defines the number of calls in the sliding window that will be used to calculate the failure rate.
+      # In this case, it's 10, so the CircuitBreaker will track the last 10 calls.
+      # These calls can be successful or failed, and their outcome determines whether to open the circuit.
+      slidingWindowSize: 10
+      # This sets the time the circuit will stay open before transitioning to half-open, in milliseconds.
+      # Here, 10000 milliseconds = 10 seconds.
+      # After this time, the circuit will attempt trial calls as specified by
+      waitDurationInOpenState: 10000
+      # This defines how many trial calls are allowed when the circuit breaker is in a half-open state.
+      # Here, 2 means that when transitioning from open to half-open, it will allow 2 calls.
+      # If those calls succeed, the circuit goes to closed; if they fail, it goes back to open.
+      permittedNumberOfCallsInHalfOpenState: 2
+      # This sets the failure rate threshold as a percentage.
+      # If more than 50% of the calls in the sliding window fail, the circuit will open.
+      # For example, if 6 out of the last 10 calls fail, the failure rate is 60%, which is above the threshold.
+      failureRateThreshold: 50
