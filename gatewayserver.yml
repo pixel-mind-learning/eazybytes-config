@@ -33,6 +33,10 @@ spring:
               # disabled default routing configurations/behaviour
               enabled: false
               lower-case-service-id: true
+      httpclient:
+        connect-timeout: 1000
+        response-timeout: 5s
+
   rabbitmq:
     host: localhost
     port: 5672
