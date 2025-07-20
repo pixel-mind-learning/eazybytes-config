@@ -35,7 +35,7 @@ spring:
               lower-case-service-id: true
       httpclient:
         connect-timeout: 1000
-        response-timeout: 5s
+        response-timeout: 50s
 
   rabbitmq:
     host: localhost
