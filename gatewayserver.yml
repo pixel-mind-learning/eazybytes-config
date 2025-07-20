@@ -26,14 +26,16 @@ eureka:
 spring:
   cloud:
     gateway:
-      discovery:
-        locator:
-          # disabled default routing configurations/behaviour
-          enabled: false
-          lower-case-service-id: true
-      httpclient:
-        connect-timeout: 1000
-        response-timeout: 50s
+      server:
+        webflux:
+          discovery:
+            locator:
+              # disabled default routing configurations/behaviour
+              enabled: false
+              lower-case-service-id: true
+    httpclient:
+      connect-timeout: 1000
+      response-timeout: 50s
 
   rabbitmq:
     host: localhost
