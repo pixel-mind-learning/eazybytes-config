@@ -57,7 +57,7 @@ resilience4j.circuitbreaker:
       # This defines the number of calls in the sliding window that will be used to calculate the failure rate.
       # In this case, it's 10, so the CircuitBreaker will track the last 10 calls.
       # These calls can be successful or failed, and their outcome determines whether to open the circuit.
-      slidingWindowSize: 10
+      slidingWindowSize: 5
       # This sets the time the circuit will stay open before transitioning to half-open, in milliseconds.
       # Here, 10000 milliseconds = 10 seconds.
       # After this time, the circuit will attempt trial calls as specified by
