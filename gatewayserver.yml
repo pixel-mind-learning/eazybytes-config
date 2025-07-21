@@ -76,4 +76,4 @@ resilience4j.circuitbreaker:
       # For example, if 6 out of the last 10 calls fail, the failure rate is 60%, which is above the threshold.
       failureRateThreshold: 50
       slowCallRateThreshold: 50
-      slowCallDurationThreshold: 10s # Important: this is your circuit breaker's internal timeout
+      slowCallDurationThreshold: 10s
