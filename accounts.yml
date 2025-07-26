@@ -97,7 +97,9 @@ resilience4j.retry:
       waitDuration: 500
       enableExponentialBackoff: true
       exponentialBackoffMultiplier: 2
-      ignoreExceptions: # when you defining retry exception, no need to define ignore exception
+      # when you defining retry exception, no need to define ignore exception
+      # can handle them directly in gateway service as well
+      ignoreExceptions:
         - java.lang.NullPointerException
       retryExceptions:
         - java.util.concurrent.TimeoutException
