@@ -60,13 +60,12 @@ info:
     version: "1.0.0"
 
 logging:
-  logging:
-    pattern:
-      level: "%5p [${spring.application.name},%X{traceId},%X{spanId}]"
   level:
     com:
       eazybytes:
         gatewayserver: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
 
 # Circuit breaker pattern configuration
 resilience4j.circuitbreaker:
