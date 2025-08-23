@@ -60,6 +60,8 @@ logging:
     com:
       eazybytes:
         cards: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{traceId},%X{spanId}]"
 
 eureka:
   client:
