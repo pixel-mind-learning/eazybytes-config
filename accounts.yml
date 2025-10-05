@@ -35,6 +35,7 @@ spring:
           group: ${spring.application.name}
         sendCommunication-out-0:
           destination: send-communication
+      default-binder: kafka
       kafka:
         binder:
           brokers:
