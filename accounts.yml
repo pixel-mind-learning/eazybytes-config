@@ -39,7 +39,7 @@ spring:
       kafka:
         binder:
           brokers:
-            - localhost:9092
+            - ${KAFKA_BROKER:localhost:9092}
 
 management:
   endpoints:
